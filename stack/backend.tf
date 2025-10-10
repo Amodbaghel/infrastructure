@@ -1,8 +1,8 @@
 terraform {
   cloud {
-    organization = "your-org-name" # 👈 apne TFC org ka naam
+    organization = "Trading-lab" # 👈 apne TFC org ka naam
     workspaces {
-      name = "your-workspace-name" # 👈 workspace ka naam jahan apply chalega
+      name = "infrastructure" # 👈 workspace ka naam jahan apply chalega
     }
   }
 

@@ -1,20 +1,19 @@
-variable "region" {
-  description = "Give the region name"
-  type        = string
-}
-
 variable "name" {
-  description = "name of the ec2"
+  description = "Name of the EC2 instance"
   type        = string
 }
 
-variable "instance-type" {
-  description = "give the instance type"
+variable "ami_id" {
+  description = "AMI ID to launch the EC2 instance"
   type        = string
 }
 
-variable "ami-id" {
-  description = "give ami id"
+variable "instance_type" {
+  description = "EC2 instance type (e.g., t2.micro)"
   type        = string
 }
 
+variable "region" {
+  description = "AWS region to launch resources"
+  type        = string
+}

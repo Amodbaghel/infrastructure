@@ -1,6 +1,7 @@
+
 module "ec2_instance" {
   source        = "./module/ec2"
   name          = var.name
-  ami           = var.ami-id
-  instance_type = var.instance-type
+  ami_id        = var.ami_id
+  instance_type = var.instance_type
 }

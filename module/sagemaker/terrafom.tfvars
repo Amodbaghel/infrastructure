@@ -1,0 +1,9 @@
+region                = "us-east-1"
+role_arn              = "arn:aws:iam::123456789012:role/YourSageMakerRole"
+pipeline_name         = "my-pipeline"
+pipeline_display_name = "My Pipeline"
+existing_model_name   = "already-deployed-model"
+endpoint_config_name  = "my-endpoint-config"
+endpoint_name         = "my-endpoint"
+instance_type         = "ml.m5.large"
+instance_count        = 1

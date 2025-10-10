@@ -1,0 +1,6 @@
+# Terraform files to ignore
+*.tfstate
+*.tfstate.backup
+.terraform/
+crash.log
+*.tfvars  # optional: agar aap sensitive info like AWS keys ya env-specific variables rakhe hain

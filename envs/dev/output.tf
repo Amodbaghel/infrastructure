@@ -1,35 +1,7 @@
 # --------------------------
 # VPC Outputs
 # --------------------------
-output "vpc_id" {
-  description = "ID of the created VPC"
-  value       = module.vpc.vpc_id
-}
 
-output "public_subnet_ids" {
-  description = "List of public subnet IDs created in the VPC"
-  value       = module.vpc.public_subnet_ids
-}
-
-output "private_subnet_ids" {
-  description = "List of private subnet IDs created in the VPC"
-  value       = module.vpc.private_subnet_ids
-}
-
-output "sagemaker_sg_id" {
-  description = "Security group ID used by SageMaker"
-  value       = module.vpc.sagemaker_sg_id
-}
-
-output "nat_gateway_id" {
-  description = "ID of the NAT Gateway"
-  value       = module.vpc.nat_gateway_id
-}
-
-output "internet_gateway_id" {
-  description = "ID of the Internet Gateway"
-  value       = module.vpc.internet_gateway_id
-}
 
 # --------------------------
 # S3 Bucket Outputs

@@ -1,25 +1,14 @@
-
-module "vpc" {
-  source          = "../../modules/vpc"
-  vpc_name        = var.vpc_name
-  cidr_block      = var.cidr_block
-  public_subnets  = var.public_subnets
-  private_subnets = var.private_subnets
-  allowed_ip      = var.allowed_ip
-  region          = var.region
-}
-
 module "s3" {
-  source    = "../../modules/s3"
+  source    = "../../modules/s3_bucket"
   name      = var.bucket_name
   ownership = var.bucket_ownership
   acl       = var.bucket_acl
 }
 
 module "iam" {
-  source        = "../../modules/iam"
+  source        = "../../modules/iam_role"
   role_name     = var.role_name
-  s3_bucket_arn = module.s3.s3_bucket_arn
+  s3_bucket_arn = module.s3.s3_bucket_arn # ✅ Works now
   policy_name   = var.policy_name
 }
 

@@ -10,7 +10,7 @@ variable "region" {
 # VPC Configuration
 # --------------------------
 variable "vpc_name" {
-  description = "Name of the VPC to create/use"
+  description = "Name of the VPC"
   type        = string
 }
 
@@ -20,17 +20,22 @@ variable "cidr_block" {
 }
 
 variable "public_subnets" {
-  description = "List of public subnet CIDRs"
+  description = "List of CIDR blocks for public subnets"
   type        = list(string)
 }
 
 variable "private_subnets" {
-  description = "List of private subnet CIDRs"
+  description = "List of CIDR blocks for private subnets"
   type        = list(string)
 }
 
+variable "region" {
+  description = "AWS region"
+  type        = string
+}
+
 variable "allowed_ip" {
-  description = "IP address or CIDR allowed for access (e.g., SSH, security groups)"
+  description = "Your IP for SSH access to resources"
   type        = string
 }
 
